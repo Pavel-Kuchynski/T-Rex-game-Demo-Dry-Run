@@ -10,7 +10,7 @@ High
 backlog
 
 ## Description
-Introduce the `Ground` entity with a scrolling x-offset and create a minimal `RenderSystem` stub that clears the canvas and draws the ground line each frame. This establishes the rendering pipeline so visual feedback is available for all subsequent tasks.
+Introduce the `Ground` entity with a scrolling x-offset and create a minimal `RenderSystem` stub that clears the canvas and draws the ground line each frame. This task also migrates the temporary T-Rex smoke render from Task 004 out of `main.js` and into `RenderSystem`.
 
 ## Acceptance Criteria
 - [ ] `Ground` entity exists in `src/entities/Ground.js` with fields: `x` (scroll offset, default `0`), `width` (canvas width), `y` (ground baseline y), `speed` (pixels/sec, driven by `DifficultySystem` later)
@@ -20,6 +20,7 @@ Introduce the `Ground` entity with a scrolling x-offset and create a minimal `Re
 - [ ] `RenderSystem` draws a horizontal ground line at `GROUND_Y` across the full canvas width
 - [ ] `RenderSystem` draws the T-Rex as a filled rectangle (placeholder) at its current `x`, `y`, `width`, `height`
 - [ ] The canvas context (`ctx`) is obtained from the canvas element in `src/main.js` and passed into the render system — `RenderSystem` does NOT query the DOM itself
+- [ ] Any direct T-Rex draw code added in Task 004 is removed from `src/main.js` and replaced by `RenderSystem.render(...)`
 - [ ] Running `npm run dev` shows a canvas with a ground line and a rectangle (T-Rex placeholder) visible
 
 ## Technical Notes
