@@ -50,3 +50,12 @@ Create a browser-based clone of the Chrome T-Rex Runner game using JavaScript an
 * Documentation
 * Build instructions
 
+## Git Rules (Agent — NORMATIVE)
+
+* **Stage all new files**: After creating any new file, run `git add <file>` (or `git add .`) immediately.
+* **No autonomous commits**: Never run `git commit` without explicit user approval. Stage changes, then stop and ask the user to review and confirm.
+* **No force-push**: Never run `git push --force`.
+* **No branch deletion**: Never delete a branch without user confirmation.
+
+See [`.github/skills/git/SKILL.md`](.github/skills/git/SKILL.md) for the full Git usage guide.
+
